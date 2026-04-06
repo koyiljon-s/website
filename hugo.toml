@@ -512,6 +512,18 @@ languageNameLatinScript = "Tiếng Việt"
 description = "Giải pháp điều phối container trong môi trường production"
 language_alternatives = ["en"]
 
+[languages.uz]
+title = "Kubernetes"
+languageName = "O'zbekcha (Uzbek)"
+contentDir = "content/uz"
+weight = 17
+languagedirection = "ltr"
+
+[languages.uz.params]
+languageNameLatinScript = "O'zbekcha"
+description = "Ishlab chiqarish darajasidagi konteyner orkestratsiyasi"
+language_alternatives = ["en"]
+
 # Ensure that the correct file names are in the correct directory. For e.g. i18n/en should contain en.toml and never de.toml
 [[module.mounts]]
 source = "i18n/bn"
@@ -577,6 +589,10 @@ target = "i18n"
 source = "i18n/zh-cn"
 target = "i18n"
 
+[[module.mounts]]
+source = "i18n/uz"
+target = "i18n"
+
 [segments]
   [segments.all]
     [[segments.all.includes]]
@@ -629,3 +645,6 @@ target = "i18n"
   [segments.vi]
     [[segments.vi.includes]]
       lang = 'vi'
+  [segments.uz]
+    [[segments.uz.includes]]
+      lang = 'uz'
